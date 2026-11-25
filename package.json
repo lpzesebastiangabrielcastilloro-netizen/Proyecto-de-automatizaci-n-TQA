@@ -1,0 +1,22 @@
+{
+  "name": "automatizacion-tqa",
+  "version": "1.0.0",
+  "description": "Banco de pruebas automatizadas para el sistema Body Solid: interfaz web, ejecución real con Playwright, reportes PDF/HTML, envío por correo y asistente de IA.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "ejecutar": "node scripts/ejecutar.js",
+    "navegadores": "npx playwright install chromium"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16",
+    "playwright": "^1.63.0"
+  }
+}
