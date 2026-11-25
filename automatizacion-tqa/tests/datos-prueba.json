@@ -1,9 +1,0 @@
-{
-  "_nota": "Cuentas de DEMOSTRACIÓN del sistema Body Solid (datos semilla de prueba, sin valor real). No usar credenciales personales.",
-  "cuentas": {
-    "admin":      { "usuario": "carlos_admin",    "clave": "BodySolid2024!", "rol": "Administrador" },
-    "entrenador": { "usuario": "esteban_trainer", "clave": "BodySolid2024!", "rol": "Entrenador" },
-    "cliente":    { "usuario": "marcos_client",   "clave": "BodySolid2024!", "rol": "Cliente", "id": "3" },
-    "inactivo":   { "usuario": "lucas_client",    "clave": "BodySolid2024!", "rol": "Cliente (cuenta inactiva)" }
-  }
-}
