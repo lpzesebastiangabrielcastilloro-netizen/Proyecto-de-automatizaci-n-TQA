@@ -1,0 +1,308 @@
+{
+  "id": "EJ-20261124-204110-ee8d",
+  "estado": "finalizada",
+  "tipo": "funcional",
+  "suite": "End-to-End",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:41:10.198Z",
+  "inicio": "2026-11-25T00:41:10.198Z",
+  "fin": "2026-11-25T00:41:23.252Z",
+  "duracionMs": 13054,
+  "casos": [
+    {
+      "id": "TC-E2E-001",
+      "nombre": "El administrador busca un socio",
+      "tipo": "funcional",
+      "suite": "End-to-End",
+      "objetivo": "Recorrer el flujo del administrador: entrar, abrir el control de miembros y filtrar por nombre.",
+      "precondiciones": "Cuenta de administrador habilitada; socio Sofía Rodríguez registrado.",
+      "datos": "Usuario carlos_admin; búsqueda \"sofia\"",
+      "esperado": "El listado muestra a Sofía Rodríguez y oculta a los demás socios.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Iniciar sesión como administrador",
+          "esperado": "Panel visible",
+          "estado": "PASS",
+          "obtenido": "Panel del administrador visible",
+          "duracionMs": 2357,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-001-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Abrir Control de Miembros",
+          "esperado": "Se muestra el listado de socios",
+          "estado": "PASS",
+          "obtenido": "Listado de socios visible",
+          "duracionMs": 354,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-001-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Buscar \"sofia\" en el filtro",
+          "esperado": "Solo aparece Sofía Rodríguez",
+          "estado": "PASS",
+          "obtenido": "Se muestra solo Sofía Rodríguez",
+          "duracionMs": 47,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-001-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3365,
+      "inicio": "2026-11-25T00:41:10.330Z",
+      "fin": "2026-11-25T00:41:13.695Z"
+    },
+    {
+      "id": "TC-E2E-002",
+      "nombre": "El entrenador abre la asignación de rutinas",
+      "tipo": "funcional",
+      "suite": "End-to-End",
+      "objetivo": "Recorrer el flujo del entrenador: entrar y abrir la asignación de rutinas a sus socios.",
+      "precondiciones": "Cuenta de entrenador habilitada.",
+      "datos": "Usuario esteban_trainer",
+      "esperado": "Se muestra la lista de socios y la ficha de rutina del socio seleccionado.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Iniciar sesión como entrenador",
+          "esperado": "Panel visible",
+          "estado": "PASS",
+          "obtenido": "Panel del entrenador visible",
+          "duracionMs": 1565,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-002-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Abrir Asignar Rutinas",
+          "esperado": "Se muestra la lista de socios",
+          "estado": "PASS",
+          "obtenido": "Lista de socios visible",
+          "duracionMs": 377,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-002-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Seleccionar al socio Marcos Cliente",
+          "esperado": "Se muestra su ficha de rutina",
+          "estado": "PASS",
+          "obtenido": "Ficha \"Hipertrofia - Plan Personalizado Completo\" cargada para Marcos Cliente",
+          "duracionMs": 529,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-002-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 2970,
+      "inicio": "2026-11-25T00:41:13.697Z",
+      "fin": "2026-11-25T00:41:16.667Z"
+    },
+    {
+      "id": "TC-E2E-003",
+      "nombre": "El cliente recorre su rutina, alimentación y logros",
+      "tipo": "funcional",
+      "suite": "End-to-End",
+      "objetivo": "Recorrer el flujo completo del cliente por sus tres secciones principales.",
+      "precondiciones": "Cuenta de cliente habilitada con rutina y plan nutricional asignados.",
+      "datos": "Usuario marcos_client",
+      "esperado": "Cada sección muestra su contenido: ejercicios, plan de alimentación y medallas.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Iniciar sesión como cliente",
+          "esperado": "Panel visible",
+          "estado": "PASS",
+          "obtenido": "Panel del cliente visible",
+          "duracionMs": 1472,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-003-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Abrir Mi Rutina",
+          "esperado": "Se muestran los ejercicios asignados",
+          "estado": "PASS",
+          "obtenido": "Ejercicios de la rutina visibles",
+          "duracionMs": 238,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-003-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Abrir Mi Alimentación",
+          "esperado": "Se muestra el plan de alimentación",
+          "estado": "PASS",
+          "obtenido": "Plan de alimentación visible",
+          "duracionMs": 363,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-003-paso3.jpg"
+          }
+        },
+        {
+          "n": 4,
+          "descripcion": "Abrir Mis Logros y Desafíos",
+          "esperado": "Se muestran las medallas",
+          "estado": "PASS",
+          "obtenido": "Medallas visibles",
+          "duracionMs": 244,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-003-paso4.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3094,
+      "inicio": "2026-11-25T00:41:16.668Z",
+      "fin": "2026-11-25T00:41:19.761Z"
+    },
+    {
+      "id": "TC-E2E-004",
+      "nombre": "El cliente consulta su progreso al asistente de IA",
+      "tipo": "funcional",
+      "suite": "End-to-End",
+      "objetivo": "Comprobar el flujo completo del asistente desde la interfaz: abrir el chat, preguntar y recibir una respuesta personalizada.",
+      "precondiciones": "Cuenta de cliente con medidas registradas.",
+      "datos": "Usuario marcos_client; pregunta sobre progreso corporal",
+      "esperado": "El chat responde con el peso, la grasa corporal y el IMC del socio.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Iniciar sesión como cliente",
+          "esperado": "Panel visible",
+          "estado": "PASS",
+          "obtenido": "Panel del cliente visible",
+          "duracionMs": 1772,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-004-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Abrir el chat del asistente",
+          "esperado": "El chat se despliega",
+          "estado": "PASS",
+          "obtenido": "Chat del asistente abierto",
+          "duracionMs": 112,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-004-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Escribir la consulta y enviarla",
+          "esperado": "La consulta se envía",
+          "estado": "PASS",
+          "obtenido": "Consulta enviada",
+          "duracionMs": 130,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-004-paso3.jpg"
+          }
+        },
+        {
+          "n": 4,
+          "descripcion": "Verificar la respuesta del asistente",
+          "esperado": "Respuesta con peso, grasa e IMC",
+          "estado": "PASS",
+          "obtenido": "El asistente respondió con peso, grasa corporal e IMC",
+          "duracionMs": 841,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-E2E-004-paso4.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3489,
+      "inicio": "2026-11-25T00:41:19.762Z",
+      "fin": "2026-11-25T00:41:23.251Z"
+    }
+  ],
+  "resumen": {
+    "total": 4,
+    "pass": 4,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-204110-ee8d.html",
+    "pdf": "informe-detallado-EJ-20261124-204110-ee8d.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – End-to-End – 24/11/2026 08:41:10 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<4748d23b-0c9d-a190-5f68-df83eb7e9c19@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-204110-ee8d.pdf",
+      "reporte-resumen-EJ-20261124-204110-ee8d.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 4 casos de la suite End-to-End en 13.1 s: 4 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-E2E-004 (3.5 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:41:10 p. m.  Ejecución EJ-20261124-204110-ee8d iniciada (End-to-End, 4 casos)",
+    "8:41:10 p. m.  TC-E2E-001 en curso · El administrador busca un socio",
+    "8:41:13 p. m.  TC-E2E-001 PASS (3365 ms)",
+    "8:41:13 p. m.  TC-E2E-002 en curso · El entrenador abre la asignación de rutinas",
+    "8:41:16 p. m.  TC-E2E-002 PASS (2970 ms)",
+    "8:41:16 p. m.  TC-E2E-003 en curso · El cliente recorre su rutina, alimentación y logros",
+    "8:41:19 p. m.  TC-E2E-003 PASS (3094 ms)",
+    "8:41:19 p. m.  TC-E2E-004 en curso · El cliente consulta su progreso al asistente de IA",
+    "8:41:23 p. m.  TC-E2E-004 PASS (3489 ms)",
+    "8:41:23 p. m.  Pruebas terminadas: 4 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:41:23 p. m.  Generando resumen ejecutivo…",
+    "8:41:23 p. m.  Reporte HTML generado",
+    "8:41:24 p. m.  Informe detallado PDF generado",
+    "8:41:24 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:41:33 p. m.  Correo enviado"
+  ]
+}

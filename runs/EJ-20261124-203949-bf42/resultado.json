@@ -1,0 +1,412 @@
+{
+  "id": "EJ-20261124-203949-bf42",
+  "estado": "finalizada",
+  "tipo": "funcional",
+  "suite": "Regression",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:39:49.255Z",
+  "inicio": "2026-11-25T00:39:49.255Z",
+  "fin": "2026-11-25T00:40:05.289Z",
+  "duracionMs": 16028,
+  "casos": [
+    {
+      "id": "TC-REG-001",
+      "nombre": "Contraseña incorrecta es rechazada",
+      "tipo": "funcional",
+      "suite": "Regression",
+      "objetivo": "Comprobar que una contraseña errónea no permite el acceso.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Usuario carlos_admin; contraseña de prueba inválida o cuenta restringida",
+      "esperado": "Se muestra el mensaje \"Contraseña incorrecta.\" y no se accede al panel.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir el formulario de acceso",
+          "esperado": "Formulario visible",
+          "estado": "PASS",
+          "obtenido": "Formulario visible",
+          "duracionMs": 1328,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-001-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Enviar las credenciales",
+          "esperado": "El sistema rechaza el acceso",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 184,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-001-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el mensaje de error",
+          "esperado": "Mensaje \"Contraseña incorrecta.\" visible",
+          "estado": "PASS",
+          "obtenido": "Mensaje \"Contraseña incorrecta.\" visible y sin acceso al panel",
+          "duracionMs": 18,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-001-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 2535,
+      "inicio": "2026-11-25T00:39:49.425Z",
+      "fin": "2026-11-25T00:39:51.960Z"
+    },
+    {
+      "id": "TC-REG-002",
+      "nombre": "Usuario inexistente es rechazado",
+      "tipo": "funcional",
+      "suite": "Regression",
+      "objetivo": "Comprobar que un usuario no registrado no puede entrar.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Usuario usuario_que_no_existe; contraseña de prueba inválida o cuenta restringida",
+      "esperado": "Se muestra el mensaje \"Usuario no encontrado.\" y no se accede al panel.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir el formulario de acceso",
+          "esperado": "Formulario visible",
+          "estado": "PASS",
+          "obtenido": "Formulario visible",
+          "duracionMs": 1570,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-002-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Enviar las credenciales",
+          "esperado": "El sistema rechaza el acceso",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 179,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-002-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el mensaje de error",
+          "esperado": "Mensaje \"Usuario no encontrado.\" visible",
+          "estado": "PASS",
+          "obtenido": "Mensaje \"Usuario no encontrado.\" visible y sin acceso al panel",
+          "duracionMs": 37,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-002-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 2575,
+      "inicio": "2026-11-25T00:39:51.961Z",
+      "fin": "2026-11-25T00:39:54.543Z"
+    },
+    {
+      "id": "TC-REG-003",
+      "nombre": "Cuenta inactiva no puede iniciar sesión",
+      "tipo": "funcional",
+      "suite": "Regression",
+      "objetivo": "Comprobar que una cuenta inactiva queda bloqueada.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Usuario lucas_client; contraseña de prueba inválida o cuenta restringida",
+      "esperado": "Se muestra el mensaje \"cuenta está inactiva\" y no se accede al panel.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir el formulario de acceso",
+          "esperado": "Formulario visible",
+          "estado": "PASS",
+          "obtenido": "Formulario visible",
+          "duracionMs": 1224,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-003-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Enviar las credenciales",
+          "esperado": "El sistema rechaza el acceso",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 171,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-003-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el mensaje de error",
+          "esperado": "Mensaje \"cuenta está inactiva\" visible",
+          "estado": "PASS",
+          "obtenido": "Mensaje \"cuenta está inactiva\" visible y sin acceso al panel",
+          "duracionMs": 37,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-003-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 2009,
+      "inicio": "2026-11-25T00:39:54.543Z",
+      "fin": "2026-11-25T00:39:56.552Z"
+    },
+    {
+      "id": "TC-REG-004",
+      "nombre": "El formulario exige usuario y contraseña",
+      "tipo": "funcional",
+      "suite": "Regression",
+      "objetivo": "Comprobar que no se puede enviar el formulario de acceso con los campos vacíos.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Campos vacíos",
+      "esperado": "El navegador marca el usuario como obligatorio y no se inicia sesión.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir el formulario de acceso",
+          "esperado": "Formulario visible",
+          "estado": "PASS",
+          "obtenido": "Formulario visible",
+          "duracionMs": 1066,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-004-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Seleccionar Iniciar Sesión sin escribir nada",
+          "esperado": "No se envía el formulario",
+          "estado": "PASS",
+          "obtenido": "Botón seleccionado con campos vacíos",
+          "duracionMs": 138,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-004-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar la validación del campo usuario",
+          "esperado": "Campo usuario marcado como obligatorio",
+          "estado": "PASS",
+          "obtenido": "El campo usuario se marcó como obligatorio",
+          "duracionMs": 79,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-004-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 1894,
+      "inicio": "2026-11-25T00:39:56.553Z",
+      "fin": "2026-11-25T00:39:58.447Z"
+    },
+    {
+      "id": "TC-REG-005",
+      "nombre": "Cerrar sesión devuelve al inicio",
+      "tipo": "funcional",
+      "suite": "Regression",
+      "objetivo": "Comprobar que al cerrar sesión se abandona el panel y se vuelve a la pantalla pública.",
+      "precondiciones": "Sesión iniciada como administrador.",
+      "datos": "Usuario carlos_admin",
+      "esperado": "Se muestra de nuevo el acceso al portal y desaparece el panel.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Iniciar sesión como administrador",
+          "esperado": "Panel visible",
+          "estado": "PASS",
+          "obtenido": "Panel del administrador visible",
+          "duracionMs": 2112,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-005-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Seleccionar Cerrar Sesión",
+          "esperado": "La sesión se cierra",
+          "estado": "PASS",
+          "obtenido": "Sesión cerrada",
+          "duracionMs": 249,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-005-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar que se vuelve a la pantalla pública",
+          "esperado": "Acceso o formulario de ingreso visible",
+          "estado": "PASS",
+          "obtenido": "Se volvió a la pantalla de acceso",
+          "duracionMs": 13,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-005-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3582,
+      "inicio": "2026-11-25T00:39:58.448Z",
+      "fin": "2026-11-25T00:40:02.030Z"
+    },
+    {
+      "id": "TC-REG-006",
+      "nombre": "Alternar entre modo claro y modo oscuro",
+      "tipo": "funcional",
+      "suite": "Regression",
+      "objetivo": "Comprobar que el botón de tema cambia entre modo claro y oscuro.",
+      "precondiciones": "Sesión iniciada como administrador.",
+      "datos": "Usuario carlos_admin",
+      "esperado": "Al seleccionar Modo Claro el botón pasa a mostrar Modo Oscuro.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Iniciar sesión como administrador",
+          "esperado": "Panel visible",
+          "estado": "PASS",
+          "obtenido": "Panel visible con botón Modo Claro",
+          "duracionMs": 1754,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-006-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Seleccionar Modo Claro",
+          "esperado": "El botón cambia a Modo Oscuro",
+          "estado": "PASS",
+          "obtenido": "El tema cambió y el botón muestra Modo Oscuro",
+          "duracionMs": 337,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-REG-006-paso2.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3257,
+      "inicio": "2026-11-25T00:40:02.031Z",
+      "fin": "2026-11-25T00:40:05.288Z"
+    },
+    {
+      "id": "TC-REG-007",
+      "nombre": "Pago con tarjeta real en la pasarela",
+      "tipo": "funcional",
+      "suite": "Regression",
+      "objetivo": "Verificar el cobro real con tarjeta de crédito.",
+      "precondiciones": "Pasarela de pagos conectada.",
+      "datos": "Tarjeta de prueba de la pasarela",
+      "esperado": "El cobro se aprueba y se emite la factura.",
+      "fallaControlada": false,
+      "estado": "SKIPPED",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Realizar un pago con tarjeta",
+          "esperado": "Cobro aprobado",
+          "estado": "NO EJECUTADO"
+        }
+      ],
+      "observacion": "Requiere una pasarela de pagos externa que no existe en el ambiente de pruebas.",
+      "error": null,
+      "duracionMs": 0,
+      "inicio": "2026-11-25T00:40:05.288Z",
+      "fin": "2026-11-25T00:40:05.289Z"
+    }
+  ],
+  "resumen": {
+    "total": 7,
+    "pass": 6,
+    "fail": 0,
+    "skipped": 1,
+    "notRun": 0,
+    "exito": 85.7
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-203949-bf42.html",
+    "pdf": "informe-detallado-EJ-20261124-203949-bf42.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Regression – 24/11/2026 08:39:49 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<4a9888a1-2eb9-4e0a-d85f-2cdb0dca9087@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-203949-bf42.pdf",
+      "reporte-resumen-EJ-20261124-203949-bf42.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 7 casos de la suite Regression en 16.0 s: 6 PASS (85.7% de éxito), 0 FAIL, 1 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-REG-005 (3.6 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:39:49 p. m.  Ejecución EJ-20261124-203949-bf42 iniciada (Regression, 7 casos)",
+    "8:39:49 p. m.  TC-REG-001 en curso · Contraseña incorrecta es rechazada",
+    "8:39:51 p. m.  TC-REG-001 PASS (2535 ms)",
+    "8:39:51 p. m.  TC-REG-002 en curso · Usuario inexistente es rechazado",
+    "8:39:54 p. m.  TC-REG-002 PASS (2575 ms)",
+    "8:39:54 p. m.  TC-REG-003 en curso · Cuenta inactiva no puede iniciar sesión",
+    "8:39:56 p. m.  TC-REG-003 PASS (2009 ms)",
+    "8:39:56 p. m.  TC-REG-004 en curso · El formulario exige usuario y contraseña",
+    "8:39:58 p. m.  TC-REG-004 PASS (1894 ms)",
+    "8:39:58 p. m.  TC-REG-005 en curso · Cerrar sesión devuelve al inicio",
+    "8:40:02 p. m.  TC-REG-005 PASS (3582 ms)",
+    "8:40:02 p. m.  TC-REG-006 en curso · Alternar entre modo claro y modo oscuro",
+    "8:40:05 p. m.  TC-REG-006 PASS (3257 ms)",
+    "8:40:05 p. m.  TC-REG-007 SKIPPED · Requiere una pasarela de pagos externa que no existe en el ambiente de pruebas.",
+    "8:40:05 p. m.  Pruebas terminadas: 6 PASS, 0 FAIL, 1 SKIPPED, 0 NOT RUN",
+    "8:40:05 p. m.  Generando resumen ejecutivo…",
+    "8:40:05 p. m.  Reporte HTML generado",
+    "8:40:06 p. m.  Informe detallado PDF generado",
+    "8:40:06 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:40:13 p. m.  Correo enviado"
+  ]
+}

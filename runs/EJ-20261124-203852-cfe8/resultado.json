@@ -1,0 +1,227 @@
+{
+  "id": "EJ-20261124-203852-cfe8",
+  "estado": "finalizada",
+  "tipo": "funcional",
+  "suite": "Sanity",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:38:52.241Z",
+  "inicio": "2026-11-25T00:38:52.241Z",
+  "fin": "2026-11-25T00:39:00.622Z",
+  "duracionMs": 8388,
+  "casos": [
+    {
+      "id": "TC-SAN-001",
+      "nombre": "Inicio de sesión como Administrador",
+      "tipo": "funcional",
+      "suite": "Sanity",
+      "objetivo": "Comprobar que un administrador válido puede iniciar sesión y llega a su panel.",
+      "precondiciones": "Sistema disponible; cuenta de prueba de administrador habilitada.",
+      "datos": "Usuario carlos_admin (cuenta de demostración)",
+      "esperado": "Se muestra el panel del administrador con su saludo.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la aplicación y entrar al portal de miembros",
+          "esperado": "Formulario de acceso visible",
+          "estado": "PASS",
+          "obtenido": "Formulario de acceso visible",
+          "duracionMs": 1543,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-001-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Ingresar usuario y contraseña, y seleccionar Iniciar Sesión",
+          "esperado": "Acceso concedido",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 324,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-001-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el panel principal del rol",
+          "esperado": "Saludo \"Hola, Carlos Admin\" visible",
+          "estado": "PASS",
+          "obtenido": "Panel de administrador visible con su saludo",
+          "duracionMs": 30,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-001-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3340,
+      "inicio": "2026-11-25T00:38:52.433Z",
+      "fin": "2026-11-25T00:38:55.766Z"
+    },
+    {
+      "id": "TC-SAN-002",
+      "nombre": "Inicio de sesión como Entrenador",
+      "tipo": "funcional",
+      "suite": "Sanity",
+      "objetivo": "Comprobar que un entrenador válido puede iniciar sesión y llega a su panel.",
+      "precondiciones": "Sistema disponible; cuenta de prueba de entrenador habilitada.",
+      "datos": "Usuario esteban_trainer (cuenta de demostración)",
+      "esperado": "Se muestra el panel del entrenador con su saludo.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la aplicación y entrar al portal de miembros",
+          "esperado": "Formulario de acceso visible",
+          "estado": "PASS",
+          "obtenido": "Formulario de acceso visible",
+          "duracionMs": 1328,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-002-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Ingresar usuario y contraseña, y seleccionar Iniciar Sesión",
+          "esperado": "Acceso concedido",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 343,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-002-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el panel principal del rol",
+          "esperado": "Saludo \"Hola, Esteban Trainer\" visible",
+          "estado": "PASS",
+          "obtenido": "Panel de entrenador visible con su saludo",
+          "duracionMs": 44,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-002-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 2580,
+      "inicio": "2026-11-25T00:38:55.767Z",
+      "fin": "2026-11-25T00:38:58.347Z"
+    },
+    {
+      "id": "TC-SAN-003",
+      "nombre": "Inicio de sesión como Cliente",
+      "tipo": "funcional",
+      "suite": "Sanity",
+      "objetivo": "Comprobar que un cliente válido puede iniciar sesión y llega a su panel.",
+      "precondiciones": "Sistema disponible; cuenta de prueba de cliente habilitada.",
+      "datos": "Usuario marcos_client (cuenta de demostración)",
+      "esperado": "Se muestra el panel del cliente con su saludo.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la aplicación y entrar al portal de miembros",
+          "esperado": "Formulario de acceso visible",
+          "estado": "PASS",
+          "obtenido": "Formulario de acceso visible",
+          "duracionMs": 1301,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-003-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Ingresar usuario y contraseña, y seleccionar Iniciar Sesión",
+          "esperado": "Acceso concedido",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 315,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-003-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el panel principal del rol",
+          "esperado": "Saludo \"Hola, Marcos Cliente\" visible",
+          "estado": "PASS",
+          "obtenido": "Panel de cliente visible con su saludo",
+          "duracionMs": 17,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-003-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 2273,
+      "inicio": "2026-11-25T00:38:58.348Z",
+      "fin": "2026-11-25T00:39:00.621Z"
+    }
+  ],
+  "resumen": {
+    "total": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-203852-cfe8.html",
+    "pdf": "informe-detallado-EJ-20261124-203852-cfe8.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Sanity – 24/11/2026 08:38:52 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<206a1745-ad18-6169-1545-e5d00764b69a@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-203852-cfe8.pdf",
+      "reporte-resumen-EJ-20261124-203852-cfe8.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 3 casos de la suite Sanity en 8.4 s: 3 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-SAN-001 (3.3 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:38:52 p. m.  Ejecución EJ-20261124-203852-cfe8 iniciada (Sanity, 3 casos)",
+    "8:38:52 p. m.  TC-SAN-001 en curso · Inicio de sesión como Administrador",
+    "8:38:55 p. m.  TC-SAN-001 PASS (3340 ms)",
+    "8:38:55 p. m.  TC-SAN-002 en curso · Inicio de sesión como Entrenador",
+    "8:38:58 p. m.  TC-SAN-002 PASS (2580 ms)",
+    "8:38:58 p. m.  TC-SAN-003 en curso · Inicio de sesión como Cliente",
+    "8:39:00 p. m.  TC-SAN-003 PASS (2273 ms)",
+    "8:39:00 p. m.  Pruebas terminadas: 3 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:39:00 p. m.  Generando resumen ejecutivo…",
+    "8:39:00 p. m.  Reporte HTML generado",
+    "8:39:01 p. m.  Informe detallado PDF generado",
+    "8:39:01 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:39:07 p. m.  Correo enviado"
+  ]
+}

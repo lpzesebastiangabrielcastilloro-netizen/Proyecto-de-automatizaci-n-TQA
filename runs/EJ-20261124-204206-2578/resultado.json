@@ -1,0 +1,155 @@
+{
+  "id": "EJ-20261124-204206-2578",
+  "estado": "finalizada",
+  "tipo": "no_funcional",
+  "suite": "Performance",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:42:06.589Z",
+  "inicio": "2026-11-25T00:42:06.589Z",
+  "fin": "2026-11-25T00:42:09.314Z",
+  "duracionMs": 2725,
+  "casos": [
+    {
+      "id": "TC-PERF-001",
+      "nombre": "La página principal carga en menos de 3 segundos",
+      "tipo": "no_funcional",
+      "suite": "Performance",
+      "objetivo": "Medir el tiempo de carga de la página de inicio.",
+      "precondiciones": "Sistema disponible y sin otras cargas pesadas.",
+      "datos": "Umbral: 3000 ms",
+      "esperado": "El evento load ocurre en menos de 3000 ms.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la página principal y medir el tiempo de carga",
+          "esperado": "Carga < 3000 ms",
+          "estado": "PASS",
+          "obtenido": "Carga completa en 733 ms (umbral 3000 ms)",
+          "duracionMs": 734,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-PERF-001-paso1.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 1533,
+      "inicio": "2026-11-25T00:42:06.957Z",
+      "fin": "2026-11-25T00:42:08.489Z"
+    },
+    {
+      "id": "TC-PERF-002",
+      "nombre": "El inicio de sesión responde en menos de 300 ms (percentil 95)",
+      "tipo": "no_funcional",
+      "suite": "Performance",
+      "objetivo": "Medir la latencia de POST /api/auth/login en 30 peticiones consecutivas.",
+      "precondiciones": "Sistema disponible y sin otras cargas pesadas.",
+      "datos": "Umbral: p95 < 300 ms",
+      "esperado": "El percentil 95 de las 30 mediciones es menor que 300 ms.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Enviar 30 inicios de sesión consecutivos",
+          "esperado": "p95 < 300 ms",
+          "estado": "PASS",
+          "obtenido": "30 peticiones · promedio 3 ms · p95 5 ms · máximo 6 ms",
+          "duracionMs": 94,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "30 peticiones · promedio 3 ms · p95 5 ms · máximo 6 ms"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 94,
+      "inicio": "2026-11-25T00:42:08.650Z",
+      "fin": "2026-11-25T00:42:08.744Z"
+    },
+    {
+      "id": "TC-PERF-003",
+      "nombre": "El asistente de IA responde en menos de 2 segundos",
+      "tipo": "no_funcional",
+      "suite": "Performance",
+      "objetivo": "Medir el tiempo de respuesta del asistente.",
+      "precondiciones": "Sistema disponible y sin otras cargas pesadas.",
+      "datos": "Umbral: 2000 ms",
+      "esperado": "La respuesta llega en menos de 2000 ms.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Consultar al asistente y medir el tiempo",
+          "esperado": "Respuesta < 2000 ms",
+          "estado": "PASS",
+          "obtenido": "Respuesta en 569 ms (umbral 2000 ms)",
+          "duracionMs": 569,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "Respuesta en 569 ms (umbral 2000 ms)"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 569,
+      "inicio": "2026-11-25T00:42:08.744Z",
+      "fin": "2026-11-25T00:42:09.313Z"
+    }
+  ],
+  "resumen": {
+    "total": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-204206-2578.html",
+    "pdf": "informe-detallado-EJ-20261124-204206-2578.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Performance – 24/11/2026 08:42:06 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<4972647c-a349-8b76-e6a4-621269dcffb7@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-204206-2578.pdf",
+      "reporte-resumen-EJ-20261124-204206-2578.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 3 casos de la suite Performance en 2.7 s: 3 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-PERF-001 (1.5 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:42:06 p. m.  Ejecución EJ-20261124-204206-2578 iniciada (Performance, 3 casos)",
+    "8:42:06 p. m.  TC-PERF-001 en curso · La página principal carga en menos de 3 segundos",
+    "8:42:08 p. m.  TC-PERF-001 PASS (1533 ms)",
+    "8:42:08 p. m.  TC-PERF-002 en curso · El inicio de sesión responde en menos de 300 ms (percentil 95)",
+    "8:42:08 p. m.  TC-PERF-002 PASS (94 ms)",
+    "8:42:08 p. m.  TC-PERF-003 en curso · El asistente de IA responde en menos de 2 segundos",
+    "8:42:09 p. m.  TC-PERF-003 PASS (569 ms)",
+    "8:42:09 p. m.  Pruebas terminadas: 3 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:42:09 p. m.  Generando resumen ejecutivo…",
+    "8:42:09 p. m.  Reporte HTML generado",
+    "8:42:10 p. m.  Informe detallado PDF generado",
+    "8:42:10 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:42:15 p. m.  Correo enviado"
+  ]
+}

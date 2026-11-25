@@ -1,0 +1,197 @@
+{
+  "id": "EJ-20261124-161449-2d39",
+  "estado": "finalizada",
+  "tipo": "funcional",
+  "suite": "Smoke",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-24T20:14:49.389Z",
+  "inicio": "2026-11-24T20:14:49.390Z",
+  "fin": "2026-11-24T20:15:00.184Z",
+  "duracionMs": 10725,
+  "casos": [
+    {
+      "id": "TC-SMK-001",
+      "nombre": "La página principal carga correctamente",
+      "tipo": "funcional",
+      "suite": "Smoke",
+      "objetivo": "Comprobar que la página de inicio del gimnasio está disponible y muestra su marca y el acceso al portal.",
+      "precondiciones": "El sistema Body Solid está en ejecución.",
+      "datos": "No requiere datos.",
+      "esperado": "Se muestra la marca BODY SOLID y el botón PORTAL MIEMBROS.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la página principal del sistema",
+          "esperado": "La página responde y se dibuja el contenido",
+          "estado": "PASS",
+          "obtenido": "Página abierta (HTTP 200)",
+          "duracionMs": 584,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SMK-001-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Verificar que aparece la marca BODY SOLID",
+          "esperado": "Texto BODY SOLID visible",
+          "estado": "PASS",
+          "obtenido": "Marca BODY SOLID visible",
+          "duracionMs": 200,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SMK-001-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar que existe el acceso PORTAL MIEMBROS",
+          "esperado": "Botón PORTAL MIEMBROS visible",
+          "estado": "PASS",
+          "obtenido": "Acceso al portal visible",
+          "duracionMs": 9,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SMK-001-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 2406,
+      "inicio": "2026-11-24T20:14:49.971Z",
+      "fin": "2026-11-24T20:14:52.378Z"
+    },
+    {
+      "id": "TC-SMK-002",
+      "nombre": "El servicio de socios responde",
+      "tipo": "funcional",
+      "suite": "Smoke",
+      "objetivo": "Comprobar que la API del sistema responde y devuelve el listado de socios.",
+      "precondiciones": "El sistema Body Solid está en ejecución.",
+      "datos": "GET /api/members",
+      "esperado": "HTTP 200 y una lista con al menos 7 socios.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Consultar GET /api/members",
+          "esperado": "HTTP 200 con lista de socios",
+          "estado": "PASS",
+          "obtenido": "HTTP 200 · 7 socios · 12 ms",
+          "duracionMs": 13,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "HTTP 200 · 7 socios · 12 ms"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 13,
+      "inicio": "2026-11-24T20:14:52.380Z",
+      "fin": "2026-11-24T20:14:52.393Z"
+    },
+    {
+      "id": "TC-SMK-003",
+      "nombre": "El portal de acceso muestra el formulario",
+      "tipo": "funcional",
+      "suite": "Smoke",
+      "objetivo": "Comprobar que desde la página principal se llega al formulario de inicio de sesión.",
+      "precondiciones": "El sistema Body Solid está en ejecución.",
+      "datos": "No requiere datos.",
+      "esperado": "Se muestran los campos de usuario y contraseña y el botón Iniciar Sesión.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la página principal",
+          "esperado": "Página cargada",
+          "estado": "PASS",
+          "obtenido": "Página principal abierta",
+          "duracionMs": 6079,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SMK-003-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Seleccionar PORTAL MIEMBROS",
+          "esperado": "Se abre el formulario de acceso",
+          "estado": "PASS",
+          "obtenido": "Formulario de acceso abierto",
+          "duracionMs": 336,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SMK-003-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar campos y botón",
+          "esperado": "Usuario, contraseña y botón Iniciar Sesión visibles",
+          "estado": "PASS",
+          "obtenido": "Usuario, contraseña y botón visibles",
+          "duracionMs": 62,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SMK-003-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 7790,
+      "inicio": "2026-11-24T20:14:52.394Z",
+      "fin": "2026-11-24T20:15:00.184Z"
+    }
+  ],
+  "resumen": {
+    "total": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-161449-2d39.html",
+    "pdf": "informe-detallado-EJ-20261124-161449-2d39.pdf"
+  },
+  "correo": {
+    "estado": "error",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "No se pudo enviar el correo: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 71dfb90a1353d-5ee8b6641d6sm15220888e0c.17 - gsmtp"
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 3 casos de la suite Smoke en 10.7 s: 3 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-SMK-003 (7.8 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "4:14:49 p. m.  Ejecución EJ-20261124-161449-2d39 iniciada (Smoke, 3 casos)",
+    "4:14:49 p. m.  TC-SMK-001 en curso · La página principal carga correctamente",
+    "4:14:52 p. m.  TC-SMK-001 PASS (2406 ms)",
+    "4:14:52 p. m.  TC-SMK-002 en curso · El servicio de socios responde",
+    "4:14:52 p. m.  TC-SMK-002 PASS (13 ms)",
+    "4:14:52 p. m.  TC-SMK-003 en curso · El portal de acceso muestra el formulario",
+    "4:15:00 p. m.  TC-SMK-003 PASS (7790 ms)",
+    "4:15:00 p. m.  Pruebas terminadas: 3 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "4:15:00 p. m.  Generando resumen ejecutivo…",
+    "4:15:00 p. m.  Reporte HTML generado",
+    "4:15:01 p. m.  Informe detallado PDF generado",
+    "4:15:01 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "4:15:03 p. m.  No se pudo enviar el correo: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 71dfb90a1353d-5ee8b6641d6sm15220888e0c.17 - gsmtp"
+  ]
+}

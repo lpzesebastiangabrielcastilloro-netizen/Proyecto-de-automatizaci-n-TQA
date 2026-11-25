@@ -1,0 +1,221 @@
+{
+  "id": "EJ-20261124-202541-3cdd",
+  "estado": "finalizada",
+  "tipo": "funcional",
+  "suite": "Sanity",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:25:41.444Z",
+  "inicio": "2026-11-25T00:25:41.444Z",
+  "fin": "2026-11-25T00:25:58.370Z",
+  "duracionMs": 16926,
+  "casos": [
+    {
+      "id": "TC-SAN-001",
+      "nombre": "Inicio de sesión como Administrador",
+      "tipo": "funcional",
+      "suite": "Sanity",
+      "objetivo": "Comprobar que un administrador válido puede iniciar sesión y llega a su panel.",
+      "precondiciones": "Sistema disponible; cuenta de prueba de administrador habilitada.",
+      "datos": "Usuario carlos_admin (cuenta de demostración)",
+      "esperado": "Se muestra el panel del administrador con su saludo.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la aplicación y entrar al portal de miembros",
+          "esperado": "Formulario de acceso visible",
+          "estado": "PASS",
+          "obtenido": "Formulario de acceso visible",
+          "duracionMs": 1936,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-001-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Ingresar usuario y contraseña, y seleccionar Iniciar Sesión",
+          "esperado": "Acceso concedido",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 366,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-001-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el panel principal del rol",
+          "esperado": "Saludo \"Hola, Carlos Admin\" visible",
+          "estado": "PASS",
+          "obtenido": "Panel de administrador visible con su saludo",
+          "duracionMs": 30,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-001-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 4315,
+      "inicio": "2026-11-25T00:25:44.068Z",
+      "fin": "2026-11-25T00:25:48.383Z"
+    },
+    {
+      "id": "TC-SAN-002",
+      "nombre": "Inicio de sesión como Entrenador",
+      "tipo": "funcional",
+      "suite": "Sanity",
+      "objetivo": "Comprobar que un entrenador válido puede iniciar sesión y llega a su panel.",
+      "precondiciones": "Sistema disponible; cuenta de prueba de entrenador habilitada.",
+      "datos": "Usuario esteban_trainer (cuenta de demostración)",
+      "esperado": "Se muestra el panel del entrenador con su saludo.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la aplicación y entrar al portal de miembros",
+          "esperado": "Formulario de acceso visible",
+          "estado": "PASS",
+          "obtenido": "Formulario de acceso visible",
+          "duracionMs": 5761,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-002-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Ingresar usuario y contraseña, y seleccionar Iniciar Sesión",
+          "esperado": "Acceso concedido",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 366,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-002-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el panel principal del rol",
+          "esperado": "Saludo \"Hola, Esteban Trainer\" visible",
+          "estado": "PASS",
+          "obtenido": "Panel de entrenador visible con su saludo",
+          "duracionMs": 22,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-002-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 6957,
+      "inicio": "2026-11-25T00:25:48.384Z",
+      "fin": "2026-11-25T00:25:55.341Z"
+    },
+    {
+      "id": "TC-SAN-003",
+      "nombre": "Inicio de sesión como Cliente",
+      "tipo": "funcional",
+      "suite": "Sanity",
+      "objetivo": "Comprobar que un cliente válido puede iniciar sesión y llega a su panel.",
+      "precondiciones": "Sistema disponible; cuenta de prueba de cliente habilitada.",
+      "datos": "Usuario marcos_client (cuenta de demostración)",
+      "esperado": "Se muestra el panel del cliente con su saludo.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la aplicación y entrar al portal de miembros",
+          "esperado": "Formulario de acceso visible",
+          "estado": "PASS",
+          "obtenido": "Formulario de acceso visible",
+          "duracionMs": 1463,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-003-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Ingresar usuario y contraseña, y seleccionar Iniciar Sesión",
+          "esperado": "Acceso concedido",
+          "estado": "PASS",
+          "obtenido": "Credenciales enviadas",
+          "duracionMs": 364,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-003-paso2.jpg"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Verificar el panel principal del rol",
+          "esperado": "Saludo \"Hola, Marcos Cliente\" visible",
+          "estado": "PASS",
+          "obtenido": "Panel de cliente visible con su saludo",
+          "duracionMs": 26,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-SAN-003-paso3.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3028,
+      "inicio": "2026-11-25T00:25:55.342Z",
+      "fin": "2026-11-25T00:25:58.369Z"
+    }
+  ],
+  "resumen": {
+    "total": 3,
+    "pass": 3,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-202541-3cdd.html",
+    "pdf": "informe-detallado-EJ-20261124-202541-3cdd.pdf"
+  },
+  "correo": {
+    "estado": "error",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "No se pudo enviar el correo: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to\n534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 5a478bee46e88-3856456e6c6sm43098136eec.2 - gsmtp"
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 3 casos de la suite Sanity en 16.9 s: 3 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-SAN-002 (7.0 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:25:41 p. m.  Ejecución EJ-20261124-202541-3cdd iniciada (Sanity, 3 casos)",
+    "8:25:44 p. m.  TC-SAN-001 en curso · Inicio de sesión como Administrador",
+    "8:25:48 p. m.  TC-SAN-001 PASS (4315 ms)",
+    "8:25:48 p. m.  TC-SAN-002 en curso · Inicio de sesión como Entrenador",
+    "8:25:55 p. m.  TC-SAN-002 PASS (6957 ms)",
+    "8:25:55 p. m.  TC-SAN-003 en curso · Inicio de sesión como Cliente",
+    "8:25:58 p. m.  TC-SAN-003 PASS (3028 ms)",
+    "8:25:58 p. m.  Pruebas terminadas: 3 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:25:58 p. m.  Generando resumen ejecutivo…",
+    "8:25:58 p. m.  Reporte HTML generado",
+    "8:26:00 p. m.  Informe detallado PDF generado",
+    "8:26:00 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:26:01 p. m.  No se pudo enviar el correo: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to\n534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor 5a478bee46e88-3856456e6c6sm43098136eec.2 - gsmtp"
+  ]
+}

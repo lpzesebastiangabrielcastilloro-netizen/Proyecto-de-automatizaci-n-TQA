@@ -1,0 +1,89 @@
+{
+  "id": "EJ-20261124-204240-a1fa",
+  "estado": "finalizada",
+  "tipo": "no_funcional",
+  "suite": "Resistencia",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:42:40.932Z",
+  "inicio": "2026-11-25T00:42:40.932Z",
+  "fin": "2026-11-25T00:42:56.089Z",
+  "duracionMs": 15156,
+  "casos": [
+    {
+      "id": "TC-SOAK-001",
+      "nombre": "Resistencia: tráfico constante sin degradación",
+      "tipo": "no_funcional",
+      "suite": "Resistencia",
+      "objetivo": "Verificar que la latencia no se degrada con el paso del tiempo bajo tráfico constante.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "15 s de tráfico, 5 peticiones por segundo",
+      "esperado": "Sin errores; la latencia del último tercio no supera el doble de la del primer tercio (+50 ms).",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Mantener tráfico constante y registrar la latencia",
+          "esperado": "Sin errores y latencia estable",
+          "estado": "PASS",
+          "obtenido": "70 peticiones en 15 s · latencia inicial 3 ms · final 3 ms · errores 0",
+          "duracionMs": 15144,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "70 peticiones en 15 s · latencia inicial 3 ms · final 3 ms · errores 0"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 15144,
+      "inicio": "2026-11-25T00:42:40.943Z",
+      "fin": "2026-11-25T00:42:56.086Z"
+    }
+  ],
+  "resumen": {
+    "total": 1,
+    "pass": 1,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-204240-a1fa.html",
+    "pdf": "informe-detallado-EJ-20261124-204240-a1fa.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Resistencia – 24/11/2026 08:42:40 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<9292dcb3-d81e-bfc8-0500-f35c0091dfb4@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-204240-a1fa.pdf",
+      "reporte-resumen-EJ-20261124-204240-a1fa.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 1 casos de la suite Resistencia en 15.2 s: 1 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-SOAK-001 (15.1 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:42:40 p. m.  Ejecución EJ-20261124-204240-a1fa iniciada (Resistencia, 1 casos)",
+    "8:42:40 p. m.  TC-SOAK-001 en curso · Resistencia: tráfico constante sin degradación",
+    "8:42:56 p. m.  TC-SOAK-001 PASS (15144 ms)",
+    "8:42:56 p. m.  Pruebas terminadas: 1 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:42:56 p. m.  Generando resumen ejecutivo…",
+    "8:42:56 p. m.  Reporte HTML generado",
+    "8:42:57 p. m.  Informe detallado PDF generado",
+    "8:42:57 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:43:01 p. m.  Correo enviado"
+  ]
+}

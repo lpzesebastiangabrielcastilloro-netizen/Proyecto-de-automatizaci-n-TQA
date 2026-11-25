@@ -1,0 +1,236 @@
+{
+  "id": "EJ-20261124-210113-4761",
+  "estado": "finalizada",
+  "tipo": "funcional",
+  "suite": "Integration",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T01:01:13.467Z",
+  "inicio": "2026-11-25T01:01:13.467Z",
+  "fin": "2026-11-25T01:01:14.642Z",
+  "duracionMs": 1174,
+  "casos": [
+    {
+      "id": "TC-INT-001",
+      "nombre": "La API de acceso devuelve token y rol",
+      "tipo": "funcional",
+      "suite": "Integration",
+      "objetivo": "Comprobar que el servicio de inicio de sesión valida credenciales y devuelve los datos de la sesión.",
+      "precondiciones": "Sistema disponible; cuenta de administrador habilitada.",
+      "datos": "POST /api/auth/login con carlos_admin",
+      "esperado": "HTTP 200 con token, rol \"admin\" y sin la contraseña en la respuesta.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Enviar credenciales válidas a POST /api/auth/login",
+          "esperado": "HTTP 200",
+          "estado": "PASS",
+          "obtenido": "HTTP 200 · 10 ms",
+          "duracionMs": 11,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "HTTP 200 · 10 ms"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Verificar el contenido de la respuesta",
+          "esperado": "Incluye token y rol admin; no incluye contraseña",
+          "estado": "PASS",
+          "obtenido": "Token recibido · rol admin · sin contraseña",
+          "duracionMs": 4,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "Token recibido · rol admin · sin contraseña"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 14,
+      "inicio": "2026-11-25T01:01:13.494Z",
+      "fin": "2026-11-25T01:01:13.509Z"
+    },
+    {
+      "id": "TC-INT-002",
+      "nombre": "Alta y baja de un socio por la API",
+      "tipo": "funcional",
+      "suite": "Integration",
+      "objetivo": "Comprobar el ciclo crear, consultar y eliminar un socio, dejando el sistema como estaba.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Socio temporal \"qa_socio_temporal\" (se elimina al final)",
+      "esperado": "El socio se crea (201), aparece en el listado y se elimina sin dejar rastro.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Crear el socio con POST /api/members",
+          "esperado": "HTTP 201",
+          "estado": "PASS",
+          "obtenido": "HTTP 201 · socio creado con id 1795568473517",
+          "duracionMs": 4,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "HTTP 201 · socio creado con id 1795568473517"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Consultar el listado y buscar al socio",
+          "esperado": "El socio aparece en GET /api/members",
+          "estado": "PASS",
+          "obtenido": "Socio encontrado en el listado",
+          "duracionMs": 3,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "Socio encontrado en el listado"
+          }
+        },
+        {
+          "n": 3,
+          "descripcion": "Eliminar al socio con DELETE /api/members/:id",
+          "esperado": "HTTP 200 y el socio desaparece",
+          "estado": "PASS",
+          "obtenido": "HTTP 200 · socio eliminado",
+          "duracionMs": 6,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "HTTP 200 · socio eliminado"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 13,
+      "inicio": "2026-11-25T01:01:13.510Z",
+      "fin": "2026-11-25T01:01:13.523Z"
+    },
+    {
+      "id": "TC-INT-003",
+      "nombre": "El asistente de IA personaliza la respuesta con los datos del socio",
+      "tipo": "funcional",
+      "suite": "Integration",
+      "objetivo": "Comprobar que el asistente integra las medidas corporales del socio en su respuesta.",
+      "precondiciones": "Sistema disponible; el socio de prueba tiene medidas registradas.",
+      "datos": "Cliente marcos_client",
+      "esperado": "La respuesta menciona el peso, la grasa corporal y el IMC del socio.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Enviar la consulta a POST /api/ai/chat",
+          "esperado": "HTTP 200 con una respuesta",
+          "estado": "PASS",
+          "obtenido": "HTTP 200 · 555 ms",
+          "duracionMs": 555,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "HTTP 200 · 555 ms"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Verificar que la respuesta usa los datos del socio",
+          "esperado": "Menciona peso, grasa e IMC",
+          "estado": "PASS",
+          "obtenido": "¡Hola, Marcos! Tu evolución antropométrica en Body Solid es ejemplar: • Peso: Registramos 81 kg (has cambiado óptimamente bajando 1.0 kg desde tu control anteri…",
+          "duracionMs": 558,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "¡Hola, Marcos! Tu evolución antropométrica en Body Solid es ejemplar: • Peso: Registramos 81 kg (has cambiado óptimamente bajando 1.0 kg desde tu control anteri…"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 1113,
+      "inicio": "2026-11-25T01:01:13.524Z",
+      "fin": "2026-11-25T01:01:14.637Z"
+    },
+    {
+      "id": "TC-INT-004",
+      "nombre": "El asistente de IA rechaza mensajes vacíos",
+      "tipo": "funcional",
+      "suite": "Integration",
+      "objetivo": "Comprobar la validación de entrada del asistente.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Mensaje vacío",
+      "esperado": "HTTP 400 con un mensaje que pide una consulta.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Enviar un mensaje vacío a POST /api/ai/chat",
+          "esperado": "HTTP 400",
+          "estado": "PASS",
+          "obtenido": "HTTP 400 · {\"error\":\"Debe proveer un mensaje de consulta.\"}",
+          "duracionMs": 3,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "HTTP 400 · {\"error\":\"Debe proveer un mensaje de consulta.\"}"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 3,
+      "inicio": "2026-11-25T01:01:14.638Z",
+      "fin": "2026-11-25T01:01:14.641Z"
+    }
+  ],
+  "resumen": {
+    "total": 4,
+    "pass": 4,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-210113-4761.html",
+    "pdf": "informe-detallado-EJ-20261124-210113-4761.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Integration – 24/11/2026 09:01:13 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<21af66a0-d143-bc09-b4ff-57deb8e6c0c5@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-210113-4761.pdf",
+      "reporte-resumen-EJ-20261124-210113-4761.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 4 casos de la suite Integration en 1.2 s: 4 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-INT-003 (1.1 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "9:01:13 p. m.  Ejecución EJ-20261124-210113-4761 iniciada (Integration, 4 casos)",
+    "9:01:13 p. m.  TC-INT-001 en curso · La API de acceso devuelve token y rol",
+    "9:01:13 p. m.  TC-INT-001 PASS (14 ms)",
+    "9:01:13 p. m.  TC-INT-002 en curso · Alta y baja de un socio por la API",
+    "9:01:13 p. m.  TC-INT-002 PASS (13 ms)",
+    "9:01:13 p. m.  TC-INT-003 en curso · El asistente de IA personaliza la respuesta con los datos del socio",
+    "9:01:14 p. m.  TC-INT-003 PASS (1113 ms)",
+    "9:01:14 p. m.  TC-INT-004 en curso · El asistente de IA rechaza mensajes vacíos",
+    "9:01:14 p. m.  TC-INT-004 PASS (3 ms)",
+    "9:01:14 p. m.  Pruebas terminadas: 4 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "9:01:14 p. m.  Generando resumen ejecutivo…",
+    "9:01:14 p. m.  Reporte HTML generado",
+    "9:01:17 p. m.  Informe detallado PDF generado",
+    "9:01:17 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "9:01:21 p. m.  Correo enviado"
+  ]
+}

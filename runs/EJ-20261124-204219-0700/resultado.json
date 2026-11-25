@@ -1,0 +1,122 @@
+{
+  "id": "EJ-20261124-204219-0700",
+  "estado": "finalizada",
+  "tipo": "no_funcional",
+  "suite": "Carga",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:42:19.976Z",
+  "inicio": "2026-11-25T00:42:19.976Z",
+  "fin": "2026-11-25T00:42:20.287Z",
+  "duracionMs": 312,
+  "casos": [
+    {
+      "id": "TC-LOAD-001",
+      "nombre": "Carga: 25 usuarios simultáneos consultan los socios",
+      "tipo": "no_funcional",
+      "suite": "Carga",
+      "objetivo": "Verificar el comportamiento con carga normal sostenida.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "100 peticiones GET /api/members, 25 en paralelo",
+      "esperado": "Sin errores y promedio menor que 500 ms.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Ejecutar 100 peticiones con 25 usuarios en paralelo",
+          "esperado": "Sin errores; promedio < 500 ms",
+          "estado": "PASS",
+          "obtenido": "100 peticiones en 0.2 s · 484 req/s · promedio 48 ms · p95 119 ms · errores 0",
+          "duracionMs": 207,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "100 peticiones en 0.2 s · 484 req/s · promedio 48 ms · p95 119 ms · errores 0"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 208,
+      "inicio": "2026-11-25T00:42:19.992Z",
+      "fin": "2026-11-25T00:42:20.199Z"
+    },
+    {
+      "id": "TC-LOAD-002",
+      "nombre": "Carga: 50 inicios de sesión simultáneos",
+      "tipo": "no_funcional",
+      "suite": "Carga",
+      "objetivo": "Verificar el servicio de acceso cuando muchos usuarios entran a la vez.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "50 POST /api/auth/login, 50 en paralelo",
+      "esperado": "Sin errores y p95 menor que 1000 ms.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Lanzar 50 inicios de sesión en paralelo",
+          "esperado": "Sin errores; p95 < 1000 ms",
+          "estado": "PASS",
+          "obtenido": "50 peticiones en 0.1 s · 581 req/s · promedio 58 ms · p95 72 ms · errores 0",
+          "duracionMs": 86,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "50 peticiones en 0.1 s · 581 req/s · promedio 58 ms · p95 72 ms · errores 0"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 87,
+      "inicio": "2026-11-25T00:42:20.200Z",
+      "fin": "2026-11-25T00:42:20.287Z"
+    }
+  ],
+  "resumen": {
+    "total": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-204219-0700.html",
+    "pdf": "informe-detallado-EJ-20261124-204219-0700.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Carga – 24/11/2026 08:42:19 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<c4eee6bb-4d77-5155-0f5d-10a8d5c027ac@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-204219-0700.pdf",
+      "reporte-resumen-EJ-20261124-204219-0700.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 2 casos de la suite Carga en 312 ms: 2 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-LOAD-001 (208 ms).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:42:19 p. m.  Ejecución EJ-20261124-204219-0700 iniciada (Carga, 2 casos)",
+    "8:42:19 p. m.  TC-LOAD-001 en curso · Carga: 25 usuarios simultáneos consultan los socios",
+    "8:42:20 p. m.  TC-LOAD-001 PASS (208 ms)",
+    "8:42:20 p. m.  TC-LOAD-002 en curso · Carga: 50 inicios de sesión simultáneos",
+    "8:42:20 p. m.  TC-LOAD-002 PASS (87 ms)",
+    "8:42:20 p. m.  Pruebas terminadas: 2 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:42:20 p. m.  Generando resumen ejecutivo…",
+    "8:42:20 p. m.  Reporte HTML generado",
+    "8:42:21 p. m.  Informe detallado PDF generado",
+    "8:42:21 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:42:24 p. m.  Correo enviado"
+  ]
+}

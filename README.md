@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Banco de pruebas Body Solid
 
 Proyecto integrador de **Automatización de Pruebas (TQA)**. Es una plataforma que ejecuta pruebas **reales** sobre el sistema Body Solid (gimnasio) desde una interfaz web, genera un **informe detallado en PDF** y un **reporte resumen en HTML**, y los envía por correo al destinatario que se indique. Incluye una funcionalidad con **Inteligencia Artificial** que convierte un requerimiento en un caso Gherkin ejecutable.
@@ -171,3 +172,6 @@ Se usan las **cuentas de demostración** que trae body-solid (administrador, ent
 - Solo se ejecuta una corrida a la vez.
 - Las reglas locales de IA están afinadas para flujos como el inicio de sesión; con un modelo de lenguaje cubren requerimientos más variados.
 - Los datos de body-solid viven en memoria: al reiniciarlo vuelven al estado semilla.
+=======
+# Proyecto-de-automatizaci-n-TQA
+>>>>>>> de4cf5f49832761f08488790b01dad6510f1042d

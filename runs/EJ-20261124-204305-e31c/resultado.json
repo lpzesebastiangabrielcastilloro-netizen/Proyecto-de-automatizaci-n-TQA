@@ -1,0 +1,146 @@
+{
+  "id": "EJ-20261124-204305-e31c",
+  "estado": "finalizada",
+  "tipo": "no_funcional",
+  "suite": "Usabilidad",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:43:05.573Z",
+  "inicio": "2026-11-25T00:43:05.573Z",
+  "fin": "2026-11-25T00:43:08.872Z",
+  "duracionMs": 3298,
+  "casos": [
+    {
+      "id": "TC-USA-001",
+      "nombre": "El formulario de acceso se adapta a un móvil (375 px)",
+      "tipo": "no_funcional",
+      "suite": "Usabilidad",
+      "objetivo": "Comprobar que la pantalla se adapta a 375 px de ancho sin desbordarse.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Ventana de 375 x 667 px",
+      "esperado": "La página no tiene desplazamiento horizontal.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir el formulario de acceso en una ventana de 375 px",
+          "esperado": "Pantalla visible",
+          "estado": "PASS",
+          "obtenido": "Pantalla visible",
+          "duracionMs": 1025,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-USA-001-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Medir el ancho del contenido frente al ancho de la ventana",
+          "esperado": "Sin desplazamiento horizontal",
+          "estado": "PASS",
+          "obtenido": "Contenido 375 px dentro de una ventana de 375 px",
+          "duracionMs": 6,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-USA-001-paso2.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 1624,
+      "inicio": "2026-11-25T00:43:05.706Z",
+      "fin": "2026-11-25T00:43:07.330Z"
+    },
+    {
+      "id": "TC-USA-002",
+      "nombre": "La página principal se adapta a una tableta (768 px)",
+      "tipo": "no_funcional",
+      "suite": "Usabilidad",
+      "objetivo": "Comprobar que la pantalla se adapta a 768 px de ancho sin desbordarse.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "Ventana de 768 x 1024 px",
+      "esperado": "La página no tiene desplazamiento horizontal.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Abrir la página principal en una ventana de 768 px",
+          "esperado": "Pantalla visible",
+          "estado": "PASS",
+          "obtenido": "Pantalla visible",
+          "duracionMs": 816,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-USA-002-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Medir el ancho del contenido frente al ancho de la ventana",
+          "esperado": "Sin desplazamiento horizontal",
+          "estado": "PASS",
+          "obtenido": "Contenido 768 px dentro de una ventana de 768 px",
+          "duracionMs": 4,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-USA-002-paso2.jpg"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 1540,
+      "inicio": "2026-11-25T00:43:07.331Z",
+      "fin": "2026-11-25T00:43:08.871Z"
+    }
+  ],
+  "resumen": {
+    "total": 2,
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-204305-e31c.html",
+    "pdf": "informe-detallado-EJ-20261124-204305-e31c.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Usabilidad – 24/11/2026 08:43:05 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<5ac627c5-57c3-114d-da1d-dc8890071968@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-204305-e31c.pdf",
+      "reporte-resumen-EJ-20261124-204305-e31c.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 2 casos de la suite Usabilidad en 3.3 s: 2 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-USA-001 (1.6 s).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:43:05 p. m.  Ejecución EJ-20261124-204305-e31c iniciada (Usabilidad, 2 casos)",
+    "8:43:05 p. m.  TC-USA-001 en curso · El formulario de acceso se adapta a un móvil (375 px)",
+    "8:43:07 p. m.  TC-USA-001 PASS (1624 ms)",
+    "8:43:07 p. m.  TC-USA-002 en curso · La página principal se adapta a una tableta (768 px)",
+    "8:43:08 p. m.  TC-USA-002 PASS (1540 ms)",
+    "8:43:08 p. m.  Pruebas terminadas: 2 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:43:08 p. m.  Generando resumen ejecutivo…",
+    "8:43:08 p. m.  Reporte HTML generado",
+    "8:43:09 p. m.  Informe detallado PDF generado",
+    "8:43:09 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:43:13 p. m.  Correo enviado"
+  ]
+}

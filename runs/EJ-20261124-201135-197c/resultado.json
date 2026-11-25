@@ -1,0 +1,108 @@
+{
+  "id": "EJ-20261124-201135-197c",
+  "estado": "finalizada",
+  "tipo": "funcional",
+  "suite": "Fallo controlado",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:11:35.673Z",
+  "inicio": "2026-11-25T00:11:35.673Z",
+  "fin": "2026-11-25T00:11:42.534Z",
+  "duracionMs": 6861,
+  "casos": [
+    {
+      "id": "TC-FAL-001",
+      "nombre": "Panel con módulo inexistente (fallo controlado)",
+      "tipo": "funcional",
+      "suite": "Fallo controlado",
+      "objetivo": "Demostrar el tratamiento de un fallo: se busca un módulo que NO existe en el sistema.",
+      "precondiciones": "Sesión de administrador.",
+      "datos": "Usuario carlos_admin; texto buscado \"Facturación Cuántica\"",
+      "esperado": "Se mostraría un módulo llamado \"Facturación Cuántica\" (no existe, por eso el caso falla a propósito).",
+      "fallaControlada": true,
+      "estado": "FAIL",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Iniciar sesión como administrador",
+          "esperado": "Panel visible",
+          "estado": "PASS",
+          "obtenido": "Panel del administrador visible",
+          "duracionMs": 2878,
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-FAL-001-paso1.jpg"
+          }
+        },
+        {
+          "n": 2,
+          "descripcion": "Buscar el módulo \"Facturación Cuántica\" en el menú",
+          "esperado": "Módulo visible en el menú",
+          "estado": "FAIL",
+          "duracionMs": 2522,
+          "error": "Esperado: \"módulo Facturación Cuántica\" visible en pantalla. Obtenido: no apareció en 2500 ms",
+          "obtenido": "Esperado: \"módulo Facturación Cuántica\" visible en pantalla. Obtenido: no apareció en 2500 ms",
+          "evidencia": {
+            "tipo": "captura",
+            "archivo": "evidencias/TC-FAL-001-paso2.jpg"
+          }
+        }
+      ],
+      "observacion": "Esperado: \"módulo Facturación Cuántica\" visible en pantalla. Obtenido: no apareció en 2500 ms",
+      "error": {
+        "tipo": "funcional",
+        "etiqueta": "Fallo funcional",
+        "mensaje": "Esperado: \"módulo Facturación Cuántica\" visible en pantalla. Obtenido: no apareció en 2500 ms",
+        "paso": 2,
+        "descripcionPaso": "Buscar el módulo \"Facturación Cuántica\" en el menú"
+      },
+      "duracionMs": 6392,
+      "inicio": "2026-11-25T00:11:36.142Z",
+      "fin": "2026-11-25T00:11:42.533Z"
+    }
+  ],
+  "resumen": {
+    "total": 1,
+    "pass": 0,
+    "fail": 1,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 0
+  },
+  "resultadoGlobal": "CON FALLOS",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-201135-197c.html",
+    "pdf": "informe-detallado-EJ-20261124-201135-197c.pdf"
+  },
+  "correo": {
+    "estado": "error",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "No se pudo enviar el correo: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to\n534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor a92af1059eb24-1b562a82b3fsm42588860c88.5 - gsmtp"
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 1 casos de la suite Fallo controlado en 6.9 s: 0 PASS (0% de éxito), 1 FAIL, 0 SKIPPED y 0 NOT RUN. Requieren atención: TC-FAL-001.",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": [
+      {
+        "caso": "TC-FAL-001 – Panel con módulo inexistente (fallo controlado)",
+        "causa": "El elemento esperado no se mostró en pantalla: puede faltar la funcionalidad o haber cambiado la interfaz.",
+        "evidencia": "captura del paso 2 · mensaje: Esperado: \"módulo Facturación Cuántica\" visible en pantalla. Obtenido: no apareció en 2500 ms"
+      }
+    ]
+  },
+  "registro": [
+    "8:11:35 p. m.  Ejecución EJ-20261124-201135-197c iniciada (Fallo controlado, 1 casos)",
+    "8:11:36 p. m.  TC-FAL-001 en curso · Panel con módulo inexistente (fallo controlado)",
+    "8:11:42 p. m.  TC-FAL-001 FAIL (6392 ms) · Esperado: \"módulo Facturación Cuántica\" visible en pantalla. Obtenido: no apareció en 2500 ms",
+    "8:11:42 p. m.  Pruebas terminadas: 0 PASS, 1 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:11:42 p. m.  Generando resumen ejecutivo…",
+    "8:11:42 p. m.  Reporte HTML generado",
+    "8:11:43 p. m.  Informe detallado PDF generado",
+    "8:11:43 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:12:41 p. m.  No se pudo enviar el correo: Invalid login: 534-5.7.9 Application-specific password required. For more information, go to\n534 5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor a92af1059eb24-1b562a82b3fsm42588860c88.5 - gsmtp"
+  ]
+}

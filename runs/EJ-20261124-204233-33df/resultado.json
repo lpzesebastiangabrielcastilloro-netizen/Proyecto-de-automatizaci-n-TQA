@@ -1,0 +1,89 @@
+{
+  "id": "EJ-20261124-204233-33df",
+  "estado": "finalizada",
+  "tipo": "no_funcional",
+  "suite": "Estrés",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:42:33.627Z",
+  "inicio": "2026-11-25T00:42:33.627Z",
+  "fin": "2026-11-25T00:42:34.226Z",
+  "duracionMs": 598,
+  "casos": [
+    {
+      "id": "TC-STR-001",
+      "nombre": "Estrés: 300 peticiones simultáneas",
+      "tipo": "no_funcional",
+      "suite": "Estrés",
+      "objetivo": "Llevar el sistema por encima de su uso normal para observar si degrada o falla.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "300 GET /api/members, 300 en paralelo",
+      "esperado": "Tasa de errores menor o igual a 1 %.",
+      "fallaControlada": false,
+      "estado": "PASS",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Lanzar 300 peticiones al mismo tiempo",
+          "esperado": "Errores ≤ 1 %",
+          "estado": "PASS",
+          "obtenido": "300 peticiones en 0.6 s · 511 req/s · promedio 436 ms · p95 452 ms · errores 0 · tasa de error 0.0 %",
+          "duracionMs": 587,
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "300 peticiones en 0.6 s · 511 req/s · promedio 436 ms · p95 452 ms · errores 0 · tasa de error 0.0 %"
+          }
+        }
+      ],
+      "observacion": "Sin observaciones",
+      "error": null,
+      "duracionMs": 587,
+      "inicio": "2026-11-25T00:42:33.638Z",
+      "fin": "2026-11-25T00:42:34.225Z"
+    }
+  ],
+  "resumen": {
+    "total": 1,
+    "pass": 1,
+    "fail": 0,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 100
+  },
+  "resultadoGlobal": "APROBADA",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-204233-33df.html",
+    "pdf": "informe-detallado-EJ-20261124-204233-33df.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Estrés – 24/11/2026 08:42:33 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<23042e9a-5f77-7eb4-4a43-ec4bd0b2f7bd@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-204233-33df.pdf",
+      "reporte-resumen-EJ-20261124-204233-33df.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 1 casos de la suite Estrés en 598 ms: 1 PASS (100% de éxito), 0 FAIL, 0 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-STR-001 (587 ms).",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": []
+  },
+  "registro": [
+    "8:42:33 p. m.  Ejecución EJ-20261124-204233-33df iniciada (Estrés, 1 casos)",
+    "8:42:33 p. m.  TC-STR-001 en curso · Estrés: 300 peticiones simultáneas",
+    "8:42:34 p. m.  TC-STR-001 PASS (587 ms)",
+    "8:42:34 p. m.  Pruebas terminadas: 1 PASS, 0 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:42:34 p. m.  Generando resumen ejecutivo…",
+    "8:42:34 p. m.  Reporte HTML generado",
+    "8:42:35 p. m.  Informe detallado PDF generado",
+    "8:42:35 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:42:38 p. m.  Correo enviado"
+  ]
+}

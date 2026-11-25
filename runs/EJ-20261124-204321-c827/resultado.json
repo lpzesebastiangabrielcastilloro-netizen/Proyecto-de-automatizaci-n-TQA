@@ -1,0 +1,102 @@
+{
+  "id": "EJ-20261124-204321-c827",
+  "estado": "finalizada",
+  "tipo": "no_funcional",
+  "suite": "Seguridad",
+  "alcance": "Categoría completa",
+  "email": "castillogabo56@gmail.com",
+  "origen": "catalogo",
+  "ambiente": "http://localhost:3000",
+  "creada": "2026-11-25T00:43:21.448Z",
+  "inicio": "2026-11-25T00:43:21.448Z",
+  "fin": "2026-11-25T00:43:21.465Z",
+  "duracionMs": 17,
+  "casos": [
+    {
+      "id": "TC-SEC-001",
+      "nombre": "El listado de socios no expone contraseñas",
+      "tipo": "no_funcional",
+      "suite": "Seguridad",
+      "objetivo": "Comprobar que la API no devuelve datos sensibles, como contraseñas, en sus respuestas.",
+      "precondiciones": "Sistema disponible.",
+      "datos": "GET /api/members sin autenticación",
+      "esperado": "Ningún socio incluye el campo \"password\" en la respuesta.",
+      "fallaControlada": false,
+      "estado": "FAIL",
+      "pasos": [
+        {
+          "n": 1,
+          "descripcion": "Consultar GET /api/members y revisar los campos devueltos",
+          "esperado": "Sin campo password en ningún socio",
+          "estado": "FAIL",
+          "duracionMs": 5,
+          "error": "Esperado: ningún socio con el campo password. Obtenido: 7 de 7 socios exponen su contraseña en texto plano",
+          "obtenido": "Esperado: ningún socio con el campo password. Obtenido: 7 de 7 socios exponen su contraseña en texto plano",
+          "evidencia": {
+            "tipo": "texto",
+            "texto": "Esperado: ningún socio con el campo password. Obtenido: 7 de 7 socios exponen su contraseña en texto plano"
+          }
+        }
+      ],
+      "observacion": "Esperado: ningún socio con el campo password. Obtenido: 7 de 7 socios exponen su contraseña en texto plano",
+      "error": {
+        "tipo": "funcional",
+        "etiqueta": "Fallo funcional",
+        "mensaje": "Esperado: ningún socio con el campo password. Obtenido: 7 de 7 socios exponen su contraseña en texto plano",
+        "paso": 1,
+        "descripcionPaso": "Consultar GET /api/members y revisar los campos devueltos"
+      },
+      "duracionMs": 5,
+      "inicio": "2026-11-25T00:43:21.460Z",
+      "fin": "2026-11-25T00:43:21.465Z"
+    }
+  ],
+  "resumen": {
+    "total": 1,
+    "pass": 0,
+    "fail": 1,
+    "skipped": 0,
+    "notRun": 0,
+    "exito": 0
+  },
+  "resultadoGlobal": "CON FALLOS",
+  "errorInfra": null,
+  "archivos": {
+    "html": "reporte-resumen-EJ-20261124-204321-c827.html",
+    "pdf": "informe-detallado-EJ-20261124-204321-c827.pdf"
+  },
+  "correo": {
+    "estado": "enviado",
+    "asunto": "Reporte de automatización – Seguridad – 24/11/2026 08:43:21 p. m.",
+    "destinatario": "castillogabo56@gmail.com",
+    "detalle": "Correo enviado a castillogabo56@gmail.com.",
+    "id": "<273ad18e-133f-4471-4f4a-922813823e1e@gmail.com>",
+    "adjuntos": [
+      "informe-detallado-EJ-20261124-204321-c827.pdf",
+      "reporte-resumen-EJ-20261124-204321-c827.html"
+    ]
+  },
+  "resumenIA": {
+    "texto": "Se ejecutaron 1 casos de la suite Seguridad en 17 ms: 0 PASS (0% de éxito), 1 FAIL, 0 SKIPPED y 0 NOT RUN. Requieren atención: TC-SEC-001.",
+    "proveedor": "local",
+    "modelo": "reglas locales",
+    "causas": [
+      {
+        "caso": "TC-SEC-001 – El listado de socios no expone contraseñas",
+        "causa": "La API devuelve datos sensibles (contraseñas) sin protegerlos: posible defecto de seguridad.",
+        "evidencia": "respuesta registrada en el paso 1 · mensaje: Esperado: ningún socio con el campo password. Obtenido: 7 de 7 socios exponen su contraseña en texto plano"
+      }
+    ]
+  },
+  "registro": [
+    "8:43:21 p. m.  Ejecución EJ-20261124-204321-c827 iniciada (Seguridad, 1 casos)",
+    "8:43:21 p. m.  TC-SEC-001 en curso · El listado de socios no expone contraseñas",
+    "8:43:21 p. m.  TC-SEC-001 FAIL (5 ms) · Esperado: ningún socio con el campo password. Obtenido: 7 de 7 socios exponen su contraseña en texto plano",
+    "8:43:21 p. m.  Pruebas terminadas: 0 PASS, 1 FAIL, 0 SKIPPED, 0 NOT RUN",
+    "8:43:21 p. m.  Generando resumen ejecutivo…",
+    "8:43:21 p. m.  Reporte HTML generado",
+    "8:43:22 p. m.  Informe detallado PDF generado",
+    "8:43:22 p. m.  Enviando reportes a castillogabo56@gmail.com…",
+    "8:43:26 p. m.  Correo enviado"
+  ]
+}

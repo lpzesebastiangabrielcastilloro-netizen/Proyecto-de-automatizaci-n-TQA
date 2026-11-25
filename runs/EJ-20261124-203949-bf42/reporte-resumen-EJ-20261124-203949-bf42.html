@@ -1,0 +1,91 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reporte de automatización – Regression – EJ-20261124-203949-bf42</title>
+<style>
+:root{--tinta:#0E1F2B;--papel:#F2F5F7;--linea:#D5DEE5;--azul:#0A7EA4;--gris:#5B6B78}
+*{box-sizing:border-box}body{margin:0;background:var(--papel);color:var(--tinta);font:15px/1.5 "Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif}
+header{background:var(--tinta);color:#fff;padding:28px clamp(16px,4vw,48px)}
+header small{color:#9FC7D6;font-size:13px}header h1{margin:6px 0 4px;font-size:clamp(22px,3vw,30px);letter-spacing:-.01em}
+header p{margin:0;color:#C9D8E0}
+main{max-width:1180px;margin:0 auto;padding:24px clamp(16px,4vw,48px) 56px}
+.resumen{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+.dato{background:#fff;border:1px solid var(--linea);border-left:5px solid var(--azul);padding:12px 14px}
+.dato span{display:block;font-size:12.5px;color:var(--gris)}.dato strong{font-size:26px;line-height:1.2}
+.dato.pass{border-left-color:#0E9F6E}.dato.fail{border-left-color:#D6372B}.dato.skip{border-left-color:#8593A0}.dato.nr{border-left-color:#E0A100}
+.barra{display:flex;height:14px;margin:0 0 22px;background:#E3E9EE;border-radius:7px;overflow:hidden}
+.barra i{display:block;height:100%}
+.ia{background:#fff;border:1px solid var(--linea);padding:16px 18px;margin-bottom:22px}
+.ia h2{margin:0 0 6px;font-size:17px}.ia p{margin:6px 0}.ia small{color:var(--gris)}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.filtros button{font:inherit;border:1px solid var(--linea);background:#fff;padding:6px 12px;border-radius:999px;cursor:pointer}
+.filtros button[aria-pressed=true]{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.tabla{overflow-x:auto;background:#fff;border:1px solid var(--linea)}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th{background:#E8EEF2;text-align:left;font-size:13px;padding:10px 12px;border-bottom:1px solid var(--linea)}
+td{padding:11px 12px;border-bottom:1px solid #E7EDF1;vertical-align:top}
+tr:last-child td{border-bottom:0}.mono{font-family:Consolas,"Courier New",monospace;font-size:13px;white-space:nowrap}
+.sub{font-size:12.5px;color:var(--gris);margin-top:2px}
+.est{display:inline-block;font-weight:700;font-size:13.5px;padding:3px 10px;border:1.5px solid;border-radius:5px;white-space:nowrap}
+footer{margin-top:20px;font-size:12.5px;color:var(--gris)}
+</style></head><body>
+<header><small>Banco de pruebas · Sistema Body Solid</small>
+<h1>Reporte de automatización – Regression</h1>
+<p>Ejecución EJ-20261124-203949-bf42 · 24 de noviembre de 2026 · 08:39:49 p. m. a 08:40:05 p. m. · 16.0 s</p></header>
+<main>
+<section class="resumen" aria-label="Resumen">
+<div class="dato"><span>Total de casos</span><strong>7</strong></div>
+<div class="dato pass"><span>PASS</span><strong>6</strong></div>
+<div class="dato fail"><span>FAIL</span><strong>0</strong></div>
+<div class="dato skip"><span>SKIPPED</span><strong>1</strong></div>
+<div class="dato nr"><span>NOT RUN</span><strong>0</strong></div>
+<div class="dato"><span>Porcentaje de éxito</span><strong>85.7%</strong></div>
+<div class="dato"><span>Resultado global</span><strong style="font-size:17px">APROBADA</strong></div>
+</section>
+<div class="barra" role="img" aria-label="Distribución de resultados">
+<i style="width:85.71428571428571%;background:#0E9F6E"></i><i style="width:0%;background:#D6372B"></i><i style="width:14.285714285714285%;background:#8593A0"></i><i style="width:0%;background:#E0A100"></i></div>
+
+<section class="ia"><h2>Resumen ejecutivo</h2><p>Se ejecutaron 7 casos de la suite Regression en 16.0 s: 6 PASS (85.7% de éxito), 0 FAIL, 1 SKIPPED y 0 NOT RUN. No se detectaron fallos funcionales en esta ejecución. El caso aprobado más lento fue TC-REG-005 (3.6 s).</p><small>Generado por reglas locales (sin IA externa). El estado de cada caso proviene de la ejecución real.</small></section>
+<div class="filtros" role="group" aria-label="Filtrar por estado">
+<button aria-pressed="true" data-f="">Todos</button><button aria-pressed="false" data-f="PASS">PASS</button><button aria-pressed="false" data-f="FAIL">FAIL</button><button aria-pressed="false" data-f="SKIPPED">SKIPPED</button><button aria-pressed="false" data-f="NOT RUN">NOT RUN</button></div>
+<div class="tabla"><table><thead><tr><th>ID</th><th>Nombre</th><th>Tipo / suite</th><th>Estado</th><th>Observación</th></tr></thead><tbody id="filas"><tr data-e="PASS">
+      <td class="mono">TC-REG-001</td>
+      <td><b>Contraseña incorrecta es rechazada</b></td>
+      <td>Funcional<div class="sub">Regression</div></td>
+      <td><span class="est" style="background:#E3F4EC;color:#0A6B47;border-color:#0E9F6E"><b>✓</b> PASS</span><div class="sub">2.5 s</div></td>
+      <td>Sin observaciones</td></tr><tr data-e="PASS">
+      <td class="mono">TC-REG-002</td>
+      <td><b>Usuario inexistente es rechazado</b></td>
+      <td>Funcional<div class="sub">Regression</div></td>
+      <td><span class="est" style="background:#E3F4EC;color:#0A6B47;border-color:#0E9F6E"><b>✓</b> PASS</span><div class="sub">2.6 s</div></td>
+      <td>Sin observaciones</td></tr><tr data-e="PASS">
+      <td class="mono">TC-REG-003</td>
+      <td><b>Cuenta inactiva no puede iniciar sesión</b></td>
+      <td>Funcional<div class="sub">Regression</div></td>
+      <td><span class="est" style="background:#E3F4EC;color:#0A6B47;border-color:#0E9F6E"><b>✓</b> PASS</span><div class="sub">2.0 s</div></td>
+      <td>Sin observaciones</td></tr><tr data-e="PASS">
+      <td class="mono">TC-REG-004</td>
+      <td><b>El formulario exige usuario y contraseña</b></td>
+      <td>Funcional<div class="sub">Regression</div></td>
+      <td><span class="est" style="background:#E3F4EC;color:#0A6B47;border-color:#0E9F6E"><b>✓</b> PASS</span><div class="sub">1.9 s</div></td>
+      <td>Sin observaciones</td></tr><tr data-e="PASS">
+      <td class="mono">TC-REG-005</td>
+      <td><b>Cerrar sesión devuelve al inicio</b></td>
+      <td>Funcional<div class="sub">Regression</div></td>
+      <td><span class="est" style="background:#E3F4EC;color:#0A6B47;border-color:#0E9F6E"><b>✓</b> PASS</span><div class="sub">3.6 s</div></td>
+      <td>Sin observaciones</td></tr><tr data-e="PASS">
+      <td class="mono">TC-REG-006</td>
+      <td><b>Alternar entre modo claro y modo oscuro</b></td>
+      <td>Funcional<div class="sub">Regression</div></td>
+      <td><span class="est" style="background:#E3F4EC;color:#0A6B47;border-color:#0E9F6E"><b>✓</b> PASS</span><div class="sub">3.3 s</div></td>
+      <td>Sin observaciones</td></tr><tr data-e="SKIPPED">
+      <td class="mono">TC-REG-007</td>
+      <td><b>Pago con tarjeta real en la pasarela</b></td>
+      <td>Funcional<div class="sub">Regression</div></td>
+      <td><span class="est" style="background:#EDF0F3;color:#4A5865;border-color:#8593A0"><b>–</b> SKIPPED</span><div class="sub">0 ms</div></td>
+      <td>Requiere una pasarela de pagos externa que no existe en el ambiente de pruebas.</td></tr></tbody></table></div>
+<footer>Destinatario: castillogabo56@gmail.com · Ambiente: http://localhost:3000 · Este reporte se generó automáticamente; los estados provienen de la ejecución real de las pruebas.</footer>
+</main>
+<script>
+document.querySelectorAll('.filtros button').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.filtros button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+var f=b.getAttribute('data-f');document.querySelectorAll('#filas tr').forEach(function(tr){tr.style.display=(!f||tr.getAttribute('data-e')===f)?'':'none'})})});
+</script></body></html>
